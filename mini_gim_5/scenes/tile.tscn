@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://ougtbhs6lfg8"]
+
+[ext_resource type="Texture2D" uid="uid://brbsyo83bmu0y" path="res://assets/sprites/caveman.png" id="1_3dk36"]
+
+[node name="Tile" type="Node2D"]
+
+[node name="Image" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+offset_right = 64.0
+offset_bottom = 64.0
+texture = ExtResource("1_3dk36")
+
+[node name="Image2" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 128.0
+offset_right = 192.0
+offset_bottom = 64.0
+texture = ExtResource("1_3dk36")
+
+[node name="Image3" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 64.0
+offset_top = -64.0
+offset_right = 128.0
+texture = ExtResource("1_3dk36")
+
+[node name="Image4" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+offset_left = 64.0
+offset_top = 64.0
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_3dk36")

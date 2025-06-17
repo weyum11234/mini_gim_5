@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=3 uid="uid://msegb73uv8cm"]
+
+[ext_resource type="Script" uid="uid://dwrfyfn6sjuc8" path="res://scripts/card.gd" id="1_6u4wf"]
+[ext_resource type="Texture2D" uid="uid://brbsyo83bmu0y" path="res://assets/sprites/caveman.png" id="1_d81rb"]
+[ext_resource type="FontFile" uid="uid://2oqrecgx7hc2" path="res://assets/fonts/PressStart2P-Regular.ttf" id="3_ktuci"]
+
+[node name="Card" type="Control"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -576.0
+offset_bottom = -576.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6u4wf")
+
+[node name="Image" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+mouse_filter = 2
+texture = ExtResource("1_d81rb")
+
+[node name="Tooltip" type="ColorRect" parent="."]
+visible = false
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0.490196)
+
+[node name="Label" type="Label" parent="Tooltip"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 256.0
+scale = Vector2(0.25, 0.25)
+theme_override_fonts/font = ExtResource("3_ktuci")
+text = "Human
+
+Can work adjacent tiles"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
